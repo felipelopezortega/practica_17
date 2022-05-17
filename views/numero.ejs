@@ -1,0 +1,73 @@
+<html>
+<head>
+    <link href="assets/style.css" type="text/css"   rel="stylesheet" >
+</head>
+<body>
+    <h1>Método para saber si un número es par o impar <%if(NUMBER % 2 == 0) {%> 
+        <h1>El número <%= NUMBER %> es PAR</h1> 
+        <ul>                    
+            <%for(let i = 0; i < (NUMBER * 2); i++){%>
+                <li>ES PAR</li>
+            <%}%>
+        </ul>
+            <%}else{%>
+        <h1>El número <%= NUMBER %> es IMPAR</h1>
+        <ul>
+            <%for(let i = 0; i < NUMBER; i++){%>
+                <li>ES IMPAR</li>
+            <%}%>
+        </ul>
+            <%}%></h1>
+
+        <!-- El código <%if(NUMBER % 2 == 0) nos sirve para diferenciar si un número es par
+        o impar, lo que hace la parte de (NUMBER % 2 == 0) significa el resto de una división entre 
+        enteros (en otros lenguajes denominado mod), es decir, si el resto de dicha división es 0,
+        significa que el número es par., este if, nos ayuda a separar el número en par o imparar
+        para poder aplicarle la operación corresponediente.-->
+        <!-- <h1>El número <%= NUMBER %> es PAR</h1> 
+            <ul>                    
+            <%for(let i = 0; i < (NUMBER * 2); i++){%>
+                <li>ES PAR</li>
+            <%}%>
+        </ul>
+    
+        El código anterior, primero, devuelve la leyenda "El número (número introducido) es PAR",
+        el código luego es un ciclo for, para los números pares, lo que dice a grandes rasgos
+        es que mientras el contador (i) sea menor que el doble del número introducido, se va a 
+        imprimir la leyenda "ES PAR", entonces, al final, el ciclo nos regresará el doble del número
+        par introducido en etiquetas "ES PAR". -->
+        <!-- <%}else{%>
+        <h1>El número <%= NUMBER %> es IMPAR</h1>
+        <ul>
+            <%for(let i = 0; i < NUMBER; i++){%>
+                <li>ES IMPAR</li>
+            <%}%>
+        </ul>
+            <%}%></h1> 
+        
+        El código anterior, primero, devuelve la leyenda "El número (número introducido) es IMPAR",
+        el código luego es un ciclo for, para los números impares, lo que dice a grandes rasgos
+        es que mientras el contador (i) sea menor que el número introducido, se va a 
+        imprimir la leyenda "ES IMPAR", entonces, al final, el ciclo nos regresará el mismo número
+        de etiquetas que digan "ES IMPAR" que el número introducido.-->
+
+        <!-- EJEMPLO PAR:
+        si se introduce el número 2, lo que se espera ver en el navegador
+        es lo siguiente:
+        El número 2 es PAR
+        ES PAR
+        ES PAR
+        ES PAR
+        ES PAR -->
+        <!-- si se introduce el número 7, lo que se espera ver en el navegador
+        es lo siguiente:
+        El número 7 es IMPAR
+        ES IMPAR
+        ES IMPAR
+        ES IMPAR
+        ES IMPAR
+        ES IMPAR
+        ES IMPAR
+        ES IMPAR -->
+</body>
+</html>
